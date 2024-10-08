@@ -1,0 +1,46 @@
+{% extends "main.html" %}
+{% load static %}
+{% block content %}
+    <section class="work-section" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h1>Comedy</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="work-item">
+                    <a href="{% url 'room' gin_room.id %}">
+                        <div class="work-item-inner">
+                            <img src="{% static 'Images/pngegg (14).png' %}" alt="Anime 1">
+                            <div class="overlay">
+                                <h3>Gintama</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="work-item">
+                    <a href="{% url 'room' drs_room.id %}">
+                        <div class="work-item-inner">
+                            <img src="{% static "Images/Dr.Stone.png" %}" alt="Anime 2">
+                            <div class="overlay">
+                                <h3>Dr.Stone</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="work-item">
+                    <a href="{% url "room" mas_room.id %}">
+                        <div class="work-item-inner">
+                            <img src="{% static "Images/mashle___folder_1_by_emersonsales_dfylmnb.png" %}" alt="Anime 3">
+                            <div class="overlay">
+                                <h3>MASHLE: MAGIC AND MUSCLES</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

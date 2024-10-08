@@ -1,0 +1,51 @@
+{% load static %}
+<header class="header">
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+            <div class="brand-name">
+                <a href="{% url "home" %}">Animania</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="{% url "home" %}">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#top">Top-Rated</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    {% if user.is_authenticated %}
+                    <li>
+                        <a href="#" >
+                            <div class="avatar avatar--small active">
+                                <img src="{{request.user.avatar.url}}">
+                            </div>
+                            @{{ request.user.username }}
+                        </a>
+                        <a class="dropdown-button">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="{% url 'login' %}">
+                            <p>Login</p>
+                        </a>
+                    </li>
+                    {% endif %}
+                    <div class="dropdown-menu">
+                        <a href="{% url 'update' %}" class="dropdown-link">
+                            <i class="fa-solid fa-pen"></i>
+                            Edit-Profile
+                        </a>
+                        <a href="{% url 'logout' %}" class="dropdown-link">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Logout
+                        </a>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>   

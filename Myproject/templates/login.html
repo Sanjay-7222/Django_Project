@@ -1,0 +1,62 @@
+{% extends "main.html" %}
+{% block content %}
+    {% if page == 'login' %}
+    <main class="main">
+        <div class="wrapper">
+            <h1>Login</h1>
+            <p class="para">Find your anime Partner</p>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="input-box">
+                    <input type="text" name="email" placeholder="e.g. dennis_ivy@gmail.com" required />
+                    <i class="fa-solid fa-at"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password" placeholder="********" required />
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <button type="submit" class="btn-01">Login</button>
+                <div class="register-link">
+                    <p>Haven't signed up yet? <a href="{% url 'register' %}">Register</a></p>
+                </div>
+                {% for message in messages %}
+                    <div class="error-message">{{ message }}</div>
+                {% endfor %}
+            </form>
+        </div>
+    </main>
+    {% else %}
+    <main class="main">
+        <div class="wrapper">
+            <h1>Sign Up</h1>
+            <p class="para">Find your anime Partner</p>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="input-box">
+                    <input type="text" name="username" placeholder="Username" required />
+                    <span class="span1"><i class="fa-solid fa-user"></i></span>
+                </div>
+                <div class="input-box">
+                    <input type="email" name="email" placeholder="e.g. dennis_ivy@gmail.com" required />
+                    <span class="span2"><i class="fa-solid fa-at"></i></span>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password1" placeholder="********" required />
+                    <span class="span3"><i class="fa-solid fa-lock"></i></span>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password2" placeholder="********" required />
+                    <span class="span4"><i class="fa-solid fa-lock"></i></span>
+                </div>
+                <button type="submit" class="btn-01">Sign Up</button>
+                <div class="register-link">
+                    <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+                </div>
+                {% for message in messages %}
+                    <div class="error-message">{{ message }}</div>
+                {% endfor %}
+            </form>
+        </div>
+    </main>
+    {% endif %}
+{% endblock %}

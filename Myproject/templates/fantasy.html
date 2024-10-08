@@ -1,0 +1,46 @@
+{% extends "main.html" %}
+{% load static %}
+{% block content %}
+    <section class="work-section" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h1>Fantasy</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="work-item">
+                    <a href="{% url 'room' hxh_room.id %}">
+                        <div class="work-item-inner">
+                            <img src="{% static 'Images/hxh.png' %}" alt="Anime 1">
+                            <div class="overlay">
+                                <h3>Hunter X Hunter</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="work-item">
+                    <a href="{% url 'room' jjk_room.id %}">
+                        <div class="work-item-inner">
+                            <img src="{% static "Images/jujutsu_kaisen_2nd_season___02_by_dainaoi_dg6z0g9.png" %}" alt="Anime 2">
+                            <div class="overlay">
+                                <h3>Jujutsu Kaisen</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="work-item">
+                    <a href="{% url "room" dn_room.id %}">
+                        <div class="work-item-inner">
+                            <img src="{% static "Images/pngegg (6).png" %}" alt="Anime 3">
+                            <div class="overlay">
+                                <h3>Death Note</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

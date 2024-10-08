@@ -1,0 +1,46 @@
+{% extends "main.html" %}
+{% load static %}
+{% block content %}
+    <section class="work-section" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h1>Action</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="work-item">
+                    <a href="{% url 'room' dbz_room.id %}">
+                        <div class="work-item-inner">
+                            <img src="{% static 'Images/pngegg (2).png' %}" alt="Anime 1">
+                            <div class="overlay">
+                                <h3>Dragon Ball Z</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="work-item">
+                    <a href="{% url 'room' naruto_room.id %}">
+                        <div class="work-item-inner">
+                            <img src="{% static "Images/pngegg (4).png" %}" alt="Anime 2">
+                            <div class="overlay">
+                                <h3>Naruto</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="work-item">
+                    <a href="{% url "room" bleach_room.id %}">
+                        <div class="work-item-inner">
+                            <img src="{% static "Images/pngegg (9).png" %}" alt="Anime 3">
+                            <div class="overlay">
+                                <h3>Bleach</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

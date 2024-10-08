@@ -1,0 +1,309 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+    <section class="home-section" id="home">
+        <div class="shape-01">
+
+        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="home-content">
+                    <h4>Connect with anime fans worldwide in dedicated chatrooms</h4>
+                    <h2>Welcome to Animania</h2>
+                </div>
+            </div>
+            <a href="#about" class="scroll-down">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                    <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                  </svg>
+            </a>
+        </div>
+    </section>
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-img">
+                    <div class="img-box">
+                        <div class="shape-02">
+                        </div>
+                        <img src="{% static "Images/pngegg (21).png" %}" alt="About US">
+                    </div>
+                </div>
+            <div class="about-content">
+                <div class="row">
+                    <div class="section-title">
+                        <h1>About Us</h1>
+                    </div>
+                </div>
+                <p> Anime is hand-drawn and computer-generated animation originating from Japan. Outside Japan and in 
+                    English, anime refers specifically to animation produced in Japan. However, in Japan and Japanes
+                    e, anime (a term derived from a shortening of the English word animation) describes all animated wo
+                    rks, regardless of style or origin. Many works of animation with a similar style to Japanese animat
+                    ion are also produced outside Japan. Video games sometimes also feature themes and art styles that a
+                    re sometimes labelled as anime.The earliest commercial Japanese animation dates to 1917. A characte
+                    ristic art style emerged in the 1960s with the works of cartoonist Osamu Tezuka and spread in follo
+                    wing decades, developing a large domestic audience. Anime is distributed theatrically, through telev
+                    ision broadcasts, directly to home media, and over the Internet. In addition to original works, ani
+                    me are often adaptations of Japanese comics (manga), light novels, or video games. It is classified
+                    into numerous genres targeting various broad and niche audiences</p>
+            <div class="stats">
+                <div class="row">
+                    <div class="stat-box">
+                        <h2>150K+</h2>
+                        <h5>Daily Downloads</h5>
+                    </div>
+                    <div class="stat-box">
+                        <h2>2500+</h2>
+                        <h5>Animes Available</h5>
+                    </div>
+                    <div class="stat-box">
+                        <h2>1M+</h2>
+                        <h5>Happy Clients</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <a href="#contact" class="btn-01">Contact Us</a>
+        </div>
+    </section>
+    <section class="service-section" id="categories">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h1>Categories</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="service-item">
+                    <a href="{% url 'action' %}">
+                        <div class="service-item-inner">
+                            <img src="{% static "Images/pngegg (15).png" %}" alt="category 1">
+                            <div class="overlay">
+                                <h3>Action</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="{% url 'adventure' %}">
+                        <div class="service-item-inner">
+                            <img src="{% static "Images/pngegg (20).png" %}" alt="category 2">
+                            <div class="overlay">
+                                <h3>Adventure</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="{% url 'hentai' %}">
+                        <div class="service-item-inner">
+                            <img src="{% static "Images/pngegg (10).png" %}" alt="category 3">
+                            <div class="overlay">
+                                <h3>Hentai</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="{% url 'fantasy' %}">
+                        <div class="service-item-inner">
+                            <img src="{% static "Images/pngegg (12).png" %}" alt="category 4">
+                            <div class="overlay">
+                                <h3>Fanatasy</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="{% url 'comedy' %}">
+                        <div class="service-item-inner">
+                            <img src="{% static "Images/pngegg (14).png" %}" alt="category 5">
+                            <div class="overlay">
+                                <h3>Comedy</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="service-item">
+                    <a href="{% url 'dark' %}">
+                        <div class="service-item-inner">
+                            <img src="{% static "Images/pngegg (5).png" %}" alt="category 6">
+                            <div class="overlay">
+                                <h3>Dark</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="work-section" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h1>Top-Rated Animes</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="work-item">
+                    <a href="{% url 'room' naruto_room.id %}">
+                        <div class="work-item-inner">
+                            <img src="{% static 'Images/pngegg (4) - Copy.jpg' %}" alt="Anime 1" data-large="{% static 'Images/pngegg (4).png' %}">
+                            <div class="overlay">
+                                <h3>Naruto</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="work-item">
+                    <a href="{% url 'room' bleach_room.id %}">
+                        <div class="work-item-inner">
+                            <img src="{% static "Images/pngegg (9) - Copy.jpg" %}" alt="Anime 2" data-large="{% static "Images/pngegg (9).png" %}">
+                            <div class="overlay">
+                                <h3>Bleach</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="work-item">
+                    <a href="{% url 'room' aot_room.id %}">
+                        <div class="work-item-inner">
+                            <img src="{% static "Images/pngegg (7) - Copy.jpg" %}" alt="Anime 3" data-large="{% static "Images/pngegg (7).png" %}">
+                            <div class="overlay">
+                                <h3>Attack on Titan</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="work-item">
+                    <a href="{% url 'room' tg_room.id %}">
+                        <div class="work-item-inner">
+                            <img src="{% static "Images/pngegg (3) - Copy.jpg" %}" alt="Anime 4" data-large="{% static "Images/pngegg (3).png" %}">
+                            <div class="overlay">
+                                <h3>Tokyo Ghoul</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="work-item">
+                    <a href="{% url 'room' dn_room.id %}">
+                        <div class="work-item-inner">
+                            <img src="{% static "Images/pngegg (6) - Copy.jpg" %}" alt="Anime 5" data-large="{% static "Images/pngegg (6).png" %}">
+                            <div class="overlay">
+                                <h3>Death Note</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="work-item">
+                    <a href="{% url 'room' op_room.id %}">
+                        <div class="work-item-inner">
+                            <img src="{% static "Images/pngegg (1).jpg.jpg" %}" alt="Anime 6" data-large="{% static "Images/pngegg (1).png" %}">
+                            <div class="overlay">
+                                <h3>One Piece</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-img">
+                    <div class="img-box">
+                        <div class="section-title">
+                            <h1>Contact Us</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="contact-form">
+                    <form action="" class="form" method="POST">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="left input-group">
+                                <label for="">Name</label>
+                                <input type="text" placeholder="Your Name Here" class="input-control" name="name">
+                                
+                            </div>
+                        <div class="right input-group">
+                            <label for="">Email or Phone</label>
+                            <input type="text" placeholder="Your Email or Phone no Here" class="input-control" name="email">
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group">
+                            <label for="">Message</label>
+                            <textarea class="input-control" placeholder="Your Message Here" name="body"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-btn">
+                        <button type="submit" class="btn-01" id="button" value="confirm">Send Message</button>
+                    </div>
+                    <div id="dialog">
+                        <div class="content">
+                        Thankyou for contacting us. We'll get back to you soon. Don't forget to check your Email.
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="contact-info">
+                <div class="row">
+                    <div class="info-item">
+                        <h5>Address</h5>
+                        <p>Manappakkam, Chennai, India, 600027</p>
+                    </div>
+                    <div class="info-item">
+                        <h5>Phone</h5>
+                        <p>+91 546 423 0875</p>
+                    </div>
+                    <div class="info-item">
+                        <h5>Email</h5>
+                        <p>animania@anime.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="social-links">
+                <a href="#" title="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" title="Instagram"><i class="fa-brands fa-square-instagram"></i></a>
+            </div>
+        </div>
+        </div>
+    </section>
+    <p class="copyright">&copy; 2024 Animania</p>
+    <div class="lightbox">
+        <div class="img-box">
+            <div class="lightbox-close">&times;</div>
+            <img src="" alt="img1" class="lightbox-img">
+            <div class="lightbox-caption">
+                <div class="lightbox-category">
+
+                </div>
+                <div class="lightbox-counter">
+
+                </div>
+            </div>
+            <div class="lightbox-controls">
+                <div class="prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
